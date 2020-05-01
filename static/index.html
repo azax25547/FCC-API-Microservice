@@ -7,9 +7,21 @@
   </head>
   <body>
     <dir>
-      <form action="/api/shorturl/new" method="post">
-        Url to be Shortened <input type="text" name="url" />
-        <input type="submit" value="POST URL" />
+      <form action="/api/exercise/new-user" method="post">
+        <pre>POST /api/exercise/new-user</pre>
+        <input type="text" name="uid" placeholder="User id" />
+        <input type="submit" value="Add User" />
+      </form>
+      <br />
+      <hr />
+      <br />
+      <form action="/api/exercise/add" method="post">
+        <pre>POST /api/exercise/add</pre>
+        <input type="text" name="uid" placeholder="user id" />
+        <input type="text" name="description" placeholder="description" />
+        <input type="text" name="duration" placeholder="duration (mins)*" />
+        <input type="text" name="date" placeholder="Date(yyyy-mm-dd)" />
+        <input type="submit" value="POST Exercise" />
       </form>
     </dir>
   </body>
