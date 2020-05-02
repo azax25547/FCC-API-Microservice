@@ -4,25 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>URL Parser</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <dir>
+    <div class="container">
+      <h1>Exercise tracker</h1>
       <form action="/api/exercise/new-user" method="post">
-        <pre>POST /api/exercise/new-user</pre>
-        <input type="text" name="uid" placeholder="User id" />
+        <h3>Create a New User</h3>
+        <p><code>POST /api/exercise/new-user</code></p>
+        <input id="uname" type="text" name="uid" placeholder="User id" />
         <input type="submit" value="Add User" />
       </form>
       <br />
       <hr />
       <br />
       <form action="/api/exercise/add" method="post">
-        <pre>POST /api/exercise/add</pre>
-        <input type="text" name="uid" placeholder="user id" />
-        <input type="text" name="description" placeholder="description" />
-        <input type="text" name="duration" placeholder="duration (mins)*" />
-        <input type="text" name="date" placeholder="Date(yyyy-mm-dd)" />
+        <h3>Add exercises</h3>
+        <p><code>POST /api/exercise/add</code></p>
+        <input id="uid" type="text" name="uid" placeholder="user id" />
+        <input
+          id="desc"
+          type="text"
+          name="description"
+          placeholder="description"
+        />
+        <input
+          id="dur"
+          type="text"
+          name="duration"
+          placeholder="duration (mins)*"
+        />
+        <input
+          id="dat"
+          type="text"
+          name="date"
+          placeholder="Date(yyyy-mm-dd)"
+        />
         <input type="submit" value="POST Exercise" />
       </form>
-    </dir>
+      <p>
+        <strong>GET users's exercise log: </strong
+        ><code>GET /api/exercise/log?{userId}[&amp;limit]</code>
+      </p>
+      <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+      <p><strong>limit</strong> = number</p>
+    </div>
   </body>
 </html>
