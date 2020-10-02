@@ -15,7 +15,8 @@ const app = express();
 
 //require dotenv to get env variables
 // require("dotenv").config();
-const MONGO_URI = 'mongodb+srv://azax:azax25547@urlshortner-service-boqld.mongodb.net/test'
+
+const MONGO_URI = 'mongodb+srv://azax:azax25547@cluster0.boqld.mongodb.net/test?retryWrites=true&w=majority'
 
 //express middlewares
 app.use(bodyparser.urlencoded({ extended: false }));
