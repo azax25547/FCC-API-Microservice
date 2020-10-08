@@ -16,7 +16,6 @@ const app = express();
 //require dotenv to get env variables
 // require("dotenv").config();
 
-const MONGO_URI = 'mongodb+srv://azax:azax25547@cluster0.boqld.mongodb.net/test?retryWrites=true&w=majority'
 
 //express middlewares
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -26,7 +25,7 @@ const absolutepath = path.join(__dirname, "/static");
 app.use(express.static(absolutepath));
 
 //MongoDB Connection
-mongoose.connect(MONGO_URI, {
+mongoose.connect(process.env.MONGO_URL_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
